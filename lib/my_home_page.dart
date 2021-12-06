@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shahid/second_page.dart';
+import 'package:shahid/utills/all_colors.dart';
 import 'package:shahid/utills/all_strings.dart';
+import 'package:slide_drawer/slide_drawer.dart';
 
 String imgSrcAvatar =
     "https://cdn.pixabay.com/photo/2020/07/14/13/07/icon-5404125_1280.png";
@@ -21,6 +23,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          // call toggle from SlideDrawer to alternate between open and close
+          // when pressed menu button
+          onPressed: () => SlideDrawer.of(context)!.toggle(),
+        ),
+        backgroundColor: AllColors.appBarClr,
         title: Text(AllStrings.shahid),
       ),
       body: Container(
@@ -91,7 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                               Column(
                                 children: [
-                                  Text(AllStrings.post60k,
+                                  Text(
+                                    AllStrings.post60k,
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 20,
