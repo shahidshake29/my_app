@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shahid/second_page.dart';
+import 'package:shahid/third_page.dart';
 import 'package:shahid/utills/all_colors.dart';
 import 'package:shahid/utills/all_strings.dart';
 import 'package:slide_drawer/slide_drawer.dart';
@@ -42,6 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         child: Column(
           children: [
+            ElevatedButton(
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ThirdPage()));
+
+                },
+                child: Text("Go To Third Page")),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
