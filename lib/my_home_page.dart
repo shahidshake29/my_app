@@ -24,6 +24,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  tileMode: TileMode.repeated,
+                  colors: [Colors.lightBlue, Colors.pink])),
+        ),
         leading: IconButton(
           icon: Icon(Icons.menu),
           // call toggle from SlideDrawer to alternate between open and close
@@ -44,9 +52,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             ElevatedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ThirdPage()));
-
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ThirdPage()));
                 },
                 child: Text("Go To Third Page")),
             Padding(

@@ -17,7 +17,14 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AllColors.appBarClr,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  tileMode: TileMode.repeated,
+                  colors: [Colors.lightBlue, Colors.pink])),
+        ),
         title: Text("Second Page"),
       ),
       body: Column(
