@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shahid/log_in.dart';
 import 'package:shahid/my_home_page.dart';
 import 'package:shahid/second_page.dart';
 import 'package:slide_drawer/slide_drawer.dart';
@@ -44,7 +45,7 @@ class _MyAppState extends State<MyApp> {
           MenuItem('Profile', icon: Icons.account_box_rounded, onTap: () {}),
           MenuItem('Setting', icon: Icons.adb, onTap: () {}),
         ],
-        child: MyHomePage(),
+        child: Login(),
       ),
     );
   }
